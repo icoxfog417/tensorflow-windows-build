@@ -31,6 +31,15 @@ conda create -n tensorflow-win swig numpy zlib
 
 (`cmake` of conda is `3.3.1`, and it causes build error, so you have to install `cmake` yourself from [here](https://cmake.org/download/).)
 
+build script is like below.
+
+```
+cmake .. -A x64 -DCMAKE_BUILD_TYPE=Release ^
+-DSWIG_EXECUTABLE=<your_conda_env_path>\Library\bin\swig.exe ^
+-DPYTHON_EXECUTABLE=<your_conda_env_path>\python.exe ^
+-DPYTHON_LIBRARIES=<your_conda_env_path>\libs\python35.lib
+```
+
 To build the tenforflow, you need below resource.
 
 * About `2G` disk space
