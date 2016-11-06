@@ -40,6 +40,8 @@ cmake .. -A x64 -DCMAKE_BUILD_TYPE=Release ^
 -DPYTHON_LIBRARIES=<your_conda_env_path>\libs\python35.lib
 ```
 
+(You need GPU related option if build on GPU)
+
 To build the tenforflow, you need below resource.
 
 * About `2G` disk space
@@ -49,4 +51,4 @@ And You have to change some of step.
 
 * If you can't find `vcvarsall.bat`, you can use `vcvars64.bat` instead.
 * I have to apply [this fix](https://github.com/tensorflow/tensorflow/pull/5411) (it fix is already merged at mater branch).
-
+* I have to apply [this fix](https://github.com/tensorflow/tensorflow/pull/5421) to build on GPU.
